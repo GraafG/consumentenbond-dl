@@ -73,7 +73,7 @@ where img2pdf
 
 1. Clone de repository en installeer dependencies:
    ```
-   git clone <repo-url>
+   git clone https://github.com/GraafG/consumentenbond-dl.git
    cd consumentenbond-dl
    npm install
    ```
