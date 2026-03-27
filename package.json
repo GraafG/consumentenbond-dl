@@ -1,0 +1,17 @@
+{
+  "name": "consumentenbond-dl",
+  "version": "1.0.0",
+  "description": "Download Consumentenbond publicaties als PDF voor offline gebruik",
+  "main": "download.js",
+  "scripts": {
+    "download": "node download.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "puppeteer-core": "^24.40.0"
+  }
+}
