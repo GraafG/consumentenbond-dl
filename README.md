@@ -87,13 +87,21 @@ where img2pdf
 
 ## Gebruik
 
+Download alle publicaties:
+
 ```
 npm run download
 ```
 
+Download alleen de nieuwste editie:
+
+```
+npm run download -- --latest
+```
+
 De tool zal:
 - Een browservenster openen en automatisch inloggen
-- Alle beschikbare publicaties downloaden (~100-150 MB per stuk, ~6.5 GB totaal voor 57 edities)
+- Alle beschikbare publicaties downloaden (~100-150 MB per stuk, ~6.5 GB totaal voor 57 edities), of alleen de nieuwste met `--latest`
 - PDFs opslaan in de `./output` map, gesorteerd per jaar
 - Eerder gedownloade publicaties overslaan
 - Tijdelijke bestanden automatisch opruimen na afloop

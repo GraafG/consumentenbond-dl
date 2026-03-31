@@ -12,6 +12,7 @@ const OUTPUT_DIR = path.resolve(process.env.OUTPUT_DIR || './output');
 const PAGES_DIR = path.join(OUTPUT_DIR, '_pages');
 const BASE_URL = 'https://www.consumentenbond.nl';
 const PAGE_WIDTH = parseInt(process.env.PAGE_WIDTH, 10) || 2400;
+const LATEST_ONLY = process.argv.includes('--latest');
 
 if (!EMAIL || !PASSWORD) {
     console.error('Missing CB_EMAIL or CB_PASSWORD. Copy .env.example to .env and fill in your credentials.');
@@ -289,8 +290,11 @@ async function main() {
     const publications = await getPublications(page);
     console.log(`\n${publications.length} publications found\n`);
 
-    for (let i = 0; i < publications.length; i++) {
-        await downloadPublication(page, publications[i], i + 1, publications.length);
+    const toDownload = LATEST_ONLY ? publications.slice(0, 1) : publications;
+    if (LATEST_ONLY) console.log(`Downloading latest only: ${toDownload[0]?.title}\n`);
+
+    for (let i = 0; i < toDownload.length; i++) {
+        await downloadPublication(page, toDownload[i], i + 1, toDownload.length);
     }
 
     // Remove _pages dir if empty
