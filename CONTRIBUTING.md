@@ -26,6 +26,12 @@ Bedankt voor je interesse om bij te dragen!
 
 ## Ontwikkelen
 
+Gebruik Node.js 22.12.0 of hoger (aanbevolen: Node.js 24 LTS).
+Voer `npm test` uit voor offline compatibiliteitstests met browser- en
+bestandssysteemmocks. Deze tests gebruiken geen account, browserdownload of
+live website. CI test ook de minimale Node.js-versie en laadt de echte
+Puppeteer-module vanuit CommonJS.
+
 ```bash
 # Installeer dependencies
 npm install
