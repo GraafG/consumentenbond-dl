@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ quiet: true });
 const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 const path = require('path');

@@ -112,6 +112,11 @@ Een volledige download duurt ongeveer 45-60 minuten. Voer het script opnieuw uit
 
 Alle instellingen staan in het `.env` bestand:
 
+Het script leest `.env` uit de huidige werkmap. Bestaande omgevingsvariabelen
+hebben voorrang; verwijzingen zoals `${CB_EMAIL}` worden niet uitgebreid.
+De extra opstartmelding van dotenv 17 is uitgeschakeld, zodat de CLI-uitvoer
+geen configuratiepaden of dotenv-tips bevat.
+
 | Variabele | Omschrijving | Standaard |
 |---|---|---|
 | `CB_EMAIL` | Je Consumentenbond e-mailadres | (verplicht) |

@@ -13,7 +13,7 @@ Bedankt voor je interesse om bij te dragen!
 ## Richtlijnen
 
 - **Geen credentials** — Commit nooit wachtwoorden, tokens, of `.env` bestanden
-- **Test je wijzigingen** — Zorg dat het script werkt met je eigen account voordat je een PR opent
+- **Test je wijzigingen** — Draai `npm test` voor de offline compatibiliteitstests voordat je een PR opent
 - **Houd het simpel** — Dit is een klein project, houd wijzigingen overzichtelijk
 - **Nederlands of Engels** — Beide talen zijn prima voor issues, PRs en comments
 
@@ -25,6 +25,12 @@ Bedankt voor je interesse om bij te dragen!
 - Betere foutafhandeling bij trage verbindingen
 
 ## Ontwikkelen
+
+`npm ci --engine-strict` en `npm test` controleren dependencies en gedrag zonder
+account, browser, downloads of `img2pdf`. CI voert deze tests uit op Node.js 18,
+20 en 22. De tests gebruiken tijdelijke synthetische `.env`-bestanden,
+een gemockte downloadflow en een lokale WebSocket/CDP-fixture met de echte
+Puppeteer-package. Ze vervangen geen handmatige browsertest.
 
 ```bash
 # Installeer dependencies

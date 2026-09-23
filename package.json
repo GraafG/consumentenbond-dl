@@ -4,14 +4,15 @@
   "description": "Download Consumentenbond publicaties als PDF voor offline gebruik",
   "main": "download.js",
   "scripts": {
-    "download": "node download.js"
+    "download": "node download.js",
+    "test": "node --test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "dotenv": "^16.6.1",
+    "dotenv": "^17.4.2",
     "puppeteer-core": "^24.40.0"
   }
 }
