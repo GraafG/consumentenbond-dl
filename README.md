@@ -30,7 +30,7 @@ output/
 
 ## Vereisten
 
-- **Node.js** v18 of hoger — [nodejs.org](https://nodejs.org/)
+- **Node.js** v22.12.0 of hoger (aanbevolen: Node.js 24 LTS) — [nodejs.org](https://nodejs.org/)
 - **Een Chromium-gebaseerde browser** (een van de volgende):
   - Google Chrome
   - Microsoft Edge
@@ -40,6 +40,9 @@ output/
   ```
   pip install img2pdf
   ```
+
+Puppeteer 25 vereist Node.js 22.12.0 of hoger. Gebruik een actuele browser:
+`puppeteer-core` downloadt geen browser en gebruikt uitsluitend `BROWSER_PATH`.
 
 ### Browserpad vinden
 

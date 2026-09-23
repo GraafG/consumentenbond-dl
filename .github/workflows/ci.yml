@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18, 20, 22]
+        node-version: ['22.12.0', '22', '24']
     steps:
       - uses: actions/checkout@v4
 
@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: npm ci
+      - run: npm ci --engine-strict
 
       - name: Check for credentials in source
         run: |
@@ -43,3 +43,6 @@ jobs:
 
       - name: Syntax check
         run: node --check download.js
+
+      - name: Offline compatibility tests
+        run: npm test
