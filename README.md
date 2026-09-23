@@ -148,6 +148,14 @@ Bugs melden of features voorstellen kan via [GitHub Issues](../../issues).
 
 Beveiligingsproblemen? Zie [SECURITY.md](SECURITY.md).
 
+## Gerelateerde tools
+
+Andere downloadtools voor persoonlijk gebruik bij betaalde abonnementen:
+
+- [tylerraw-dl](https://github.com/GraafG/tylerraw-dl) — Tyler Raw abonnementsvideo's
+- [elektormagazine-dl](https://github.com/GraafG/elektormagazine-dl) — Elektor Magazine edities als PDF
+- [flyaoamedia-dl](https://github.com/GraafG/flyaoamedia-dl) — FlyAOA Media vliegtrainingsvideo's + lesmateriaal (PDF)
+
 ## Disclaimer
 
 Deze tool is bedoeld voor persoonlijk gebruik door betalende Consumentenbond leden om hun eigen publicaties offline te lezen. Deel geen gedownloade bestanden — respecteer het auteursrecht van de Consumentenbond.
