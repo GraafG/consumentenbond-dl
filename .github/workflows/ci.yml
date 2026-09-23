@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: npm ci
+      - run: npm ci --engine-strict
 
       - name: Check for credentials in source
         run: |
@@ -43,3 +43,6 @@ jobs:
 
       - name: Syntax check
         run: node --check download.js
+
+      - name: Offline compatibility tests
+        run: npm test
